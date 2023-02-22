@@ -12,13 +12,14 @@
   </div>
   <script>
     let pokemon;
-    pokemon = ["피카츄","라이츄","파이리","꼬부기","버터플","야도란"]
+    pokemon = ["피카츄","라이츄","파이리","꼬부기","버터플","야도란","피존투"]
     let root = document.getElementById("root")
-    for(
-      let index = 0; //index 선언과 동시에 0할당
-      index < 10; //만약 index가 10보다 적다면, 비교연산
-      index = index+1 //index에 index보다 1을 더해서 할당해라.
-      ) {}
+
+    for(let i=0; i<pokemon.length-1; i++) {
+      let li = document.createElement("li");
+      li.textContent = pokemon[i];
+      root.appendChild(li);
+    }
     
   </script>
 </body>
