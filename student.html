@@ -13,34 +13,37 @@
   ! 느낌표
   ? 파란색
   todo:토도 주황색
- -->
+  -->
   </div>
   <script>
-    //학생의 이름은 몇번인가?
-    //몇번 학생의 이름은 무엇인가?
+    let root = document.getElementById('root')
+    //이름의 학생은 몇번인가?
+    //n번 학생의 이름은 무엇인가?
     //문서로 출력
     let student = [  "강지민",  "곽윤호",  "권예준",  "김동주",  "김은아",  "김종윤",  "김지섭",  "김형진",  "노수민",  "류은이",  "박달재",  "박수연",  "박준형",  "성해경",  "이경택",  "이세민",  "이재권",  "임지성",  "장루빈",  "정성철",  "정지은",  "정희은",  "최대건",  "한유진",  "허진",];
     console.log(student.length)
     
     let name = "박달재";
-    let num = 9;
+    let num = 12;
     
     console.log(student.indexOf(name))
     console.log("--------------------------------")
     console.log(student[student.indexOf(name)])
-
-
-    
     console.log("--------------------------------")
+    let h1=document.createElement("h1")
     for(let i=0; i<student.length-1;i++){
       
       if(student[i]==name){
-        console.log(student[i]+", " + i) 
+        console.log(student[i]+", " + i)
+        h1.textContent = name+"님의 번호는 "+ i
       }
-
+      
       if(i==num){
         console.log(student[i])
+        h1.textContent = num + "번째 학생의 이름은 " + student[i]
       }
+
+      root.appendChild(h1)
       
     }
   </script>
